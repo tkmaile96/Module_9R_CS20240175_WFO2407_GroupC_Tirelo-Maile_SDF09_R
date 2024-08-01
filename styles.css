@@ -23,7 +23,7 @@ h1 {
     color: gold;
     margin-bottom: 15px;
 }
-#message {
+#message-el {
     font-style: italic;
 }
 p {
