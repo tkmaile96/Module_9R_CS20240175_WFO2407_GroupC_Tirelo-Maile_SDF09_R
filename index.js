@@ -42,8 +42,8 @@ playerEl.textContent = player.name + ": $" + player.chips;
     sum = 0;
 
     // adding cards to my array
-    let firstCard = getRandomcard();
-    let secondCard = getRandomcard();
+    let firstCard = getRandomCard();
+    let secondCard = getRandomCard();
     cards.push(firstCard);
     cards.push(secondCard);
     sum = firstCard + secondCard;
