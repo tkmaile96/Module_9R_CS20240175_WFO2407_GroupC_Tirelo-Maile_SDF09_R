@@ -11,14 +11,13 @@ let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let playerEl = document.getElementById("player-el");
 
-// player object with name and a the chips
-
+// player object with name and a the chip
 let player = {
     name: "TK",
     chips: 200 
 };
 
-
+//Display player name and the chip on the website
 playerEl.textContent = player.name + ": $" + player.chips;
 
 
@@ -65,12 +64,12 @@ playerEl.textContent = player.name + ": $" + player.chips;
 
 // logic of the game
     if (sum <= 20) {
-        message = "Do you want to draw a new card🤔?";
+        message = "Do you want to draw a new card🤔?"; //sum of cards is less than 20
     } else if (sum === 21) {
-        message = "Hooray🎉 you've got Blackjack👏🏽";
+        message = "Hooray🎉 you've got Blackjack👏🏽"; // sum of cards is exactly 21
         hasBlackJack = true;
     } else {
-        message = "Oh Sorry🥲 You're out of the game!"
+        message = "Oh Sorry🥲 You're out of the game!" // sum of cards is above 21
         isAlive = false;
     }
 
