@@ -23,7 +23,7 @@ playerEl.textContent = player.name + ": $" + player.chips;
 
 
 // first functoion
- function getRandomcard() {
+ function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1; //Cards from 1 to 13
     if (randomNumber > 10) {
         return 10;
@@ -41,8 +41,9 @@ playerEl.textContent = player.name + ": $" + player.chips;
     cards =  [];
     sum = 0;
 
+
     // adding cards to my array
-    let firstCard = getRandomCard();
+    let firstCard = getRandomCard(); 
     let secondCard = getRandomCard();
     cards.push(firstCard);
     cards.push(secondCard);
@@ -55,21 +56,21 @@ playerEl.textContent = player.name + ": $" + player.chips;
   // Third Function
 
   function renderGame() {
-    cardsEl.textContent = "Cards: "
+    cardsEl.textContent = "cards: "
     for ( let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " "; //display all the cards
     }
 
-    sumEl.textContent = "Sum: " + sum;
+    sumEl.textContent = "sum: " + sum;
 
 // logic of the game
     if (sum <= 20) {
-        message = "Do you want to draw a new card?";
+        message = "Do you want to draw a new card🤔?";
     } else if (sum === 21) {
-        message = "You've got Blackjack";
+        message = "Hooray🎉 you've got Blackjack👏🏽";
         hasBlackJack = true;
     } else {
-        message = "You're out of the game!"
+        message = "Oh Sorry🥲 You're out of the game!"
         isAlive = false;
     }
 
@@ -80,7 +81,7 @@ playerEl.textContent = player.name + ": $" + player.chips;
 
   function newCard() {
     if (isAlive && !hasBlackJack) {
-        let card = getRandomcard(); 
+        let card = getRandomCard(); 
         sum += card;
         cards.push(card);
         renderGame();
