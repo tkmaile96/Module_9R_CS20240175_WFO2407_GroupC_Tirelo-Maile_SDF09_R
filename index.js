@@ -25,11 +25,11 @@ playerEl.textContent = player.name + ": $" + player.chips;
  function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1; //Cards from 1 to 13
     if (randomNumber > 10) {
-        return 10;
+        return 10; // cards like 11, 12 and 13 should be 10
     } else if (randomNumber === 1) {
-        return 11;
+        return 11; // Ace or 1 can be 11
     } else {
-        return randomNumber;
+        return randomNumber; // cards from 2-10 should be returned as they are
     }
  }
   // Second function to start the game
